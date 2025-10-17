@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automation-agent"
+version = "0.1.0"
+description = "Natural language driven browser automation agent"
+authors = [{ name = "Automation Agent Authors" }]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[project.scripts]
+automation-agent = "automation_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
